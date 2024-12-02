@@ -1,17 +1,21 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
+
+
+<!-- Mirrored from demos.creative-tim.com/argon-dashboard/pages/profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Dec 2024 16:06:57 GMT -->
+<!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
-    <title>SPK Laptop One</title>
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <title>
+        Argon Dashboard 3 by Creative Tim
+    </title>
+    <!-- Extra details for Live View on GitHub Pages -->
+    <!-- Canonical SEO -->
     <link rel="canonical" href="https://www.creative-tim.com/product/argon-dashboard" />
     <!--  Social tags      -->
     <meta name="keywords"
@@ -45,7 +49,7 @@ session_start();
     <!-- Font Awesome Icons -->
     <script src="../../../kit.fontawesome.com/42d5adcbca.html" crossorigin="anonymous"></script>
     <!-- CSS Files -->
-    <link id="pagestyle" href="assets/css/argon-dashboard.minf066.css?v=2.1.0" rel="stylesheet" />
+    <link id="pagestyle" href="../assets/css/argon-dashboard.minf066.css?v=2.1.0" rel="stylesheet" />
     <!-- Anti-flicker snippet (recommended)  -->
     <style>
     .async-hide {
@@ -113,72 +117,11 @@ session_start();
 </head>
 
 <body class="g-sidenav-show bg-gray-100">
-    <main class="main-content mt-0">
-        <section>
-            <div class="page-header min-vh-100">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
-                            <div class="card card-plain">
-                                <div class="card-header pb-0 text-start">
-                                    <h4 class="font-weight-bolder">Login Pengguna</h4>
-                                    <p class="mb-0">Masukkan username dan password Anda untuk masuk</p>
-                                </div>
-                                <div class="card-body">
-                                    <?php if (!empty($_SESSION['message'])): ?>
-                                    <div class="alert alert-danger alert-block">
-                                        <strong><?= $_SESSION['message']; ?></strong>
-                                    </div>
-                                    <?php session_unset(); ?>
-                                    <?php endif; ?>
-                                    <form method="POST" action="cekLogin.php" role="form">
-                                        <div class="mb-3">
-                                            <input type="text" class="form-control form-control-lg" name="username"
-                                                placeholder="Username" required>
-                                        </div>
-                                        <div class="mb-3">
-                                            <input type="password" class="form-control form-control-lg" name="password"
-                                                placeholder="Password" required>
-                                        </div>
-                                        <div class="text-center">
-                                            <input type="submit" class="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0"
-                                                value="Login">
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="card-footer text-center pt-0 px-lg-2 px-1">
-                                    <p class="mb-4 text-sm mx-auto">
-                                        Belum punya akun?
-                                        <a href="javascript:;"
-                                            class="text-primary text-gradient font-weight-bold">Daftar</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column">
-                            <div class="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden"
-                                style="background-image: url('Assets/img/login_icon.svg'); background-size: cover;">
-                                <span class="mask bg-gradient-primary opacity-6"></span>
-                                <h4 class="mt-5 text-white font-weight-bolder position-relative">"Attention is the new
-                                    currency"</h4>
-                                <p class="text-white position-relative">The more effortless the writing looks, the more
-                                    effort the writer actually put into the process.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-
-
     <!--   Core JS Files   -->
-    <script src="assets/js/core/popper.min.js"></script>
-    <script src="assets/js/core/bootstrap.min.js"></script>
-    <script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
-    <script src="assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="../assets/js/core/popper.min.js"></script>
+    <script src="../assets/js/core/bootstrap.min.js"></script>
+    <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
     <script>
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {
@@ -191,12 +134,10 @@ session_start();
     <!-- Github buttons -->
     <script async defer src="../../../buttons.github.io/buttons.js"></script>
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="assets/js/argon-dashboard.minf066.js?v=2.1.0"></script>
+    <script src="../assets/js/argon-dashboard.minf066.js?v=2.1.0"></script>
     <script defer
         src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
         integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
         data-cf-beacon='{"rayId":"8eb452f3eabaa999","version":"2024.10.5","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"1b7cbb72744b40c580f8633c6b62637e","b":1}'
         crossorigin="anonymous"></script>
 </body>
-
-</html>
