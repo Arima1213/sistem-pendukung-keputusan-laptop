@@ -28,7 +28,7 @@ include_once 'connection.php';
             <button class='btn btn-light' onclick=" location.href='MasterKaryawan.php'">Master Karyawan</button>
             <div class='sidebarDivider align-self-center'></div>
             <button class='btn btn-light' id='buttonHitung' onclick=" location.href='pilihKriteria.php'">Hitung</button>
-            <button class='btn btn-light' id='buttonHitung' onclick="location.href = 'logout.php'">Logout</button>
+            <button class='btn btn-light' id='buttonHitung' onclick=" location.href='logout.php'">Logout</button>
         </div>
         <div class='col d-flex flex-column coreTab h-100 py-5'>
             <div class='container-fluid px-5 d-flex w-100 justify-content-between'>
@@ -56,16 +56,17 @@ include_once 'connection.php';
                     $num = 1;
                     while ($data = mysqli_fetch_array($res)) {
                     ?>
-                        <tr>
-                            <th scope="row"> <?= $num; ?> </th>
-                            <td> <?= $data['MERK'] ?> </td>
-                            <td> <?= $data['NAMA_LAPTOP'] ?> </td>
-                            <td>
-                                <a href="formEditLaptop.php?id_laptop=<?= $data["ID_LAPTOP"] ?>">
-                                    <button type="button" class="btn btn-success">Edit</button></a>
-                                <button class='btn btn-danger' onclick='hapusLaptop(<?= $data["ID_LAPTOP"] ?>)'>Hapus</button>
-                            </td>
-                        </tr>
+                    <tr>
+                        <th scope="row"> <?= $num; ?> </th>
+                        <td> <?= $data['MERK'] ?> </td>
+                        <td> <?= $data['NAMA_LAPTOP'] ?> </td>
+                        <td>
+                            <a href="formEditLaptop.php?id_laptop=<?= $data["ID_LAPTOP"] ?>">
+                                <button type="button" class="btn btn-success">Edit</button></a>
+                            <button class='btn btn-danger'
+                                onclick='hapusLaptop(<?= $data["ID_LAPTOP"] ?>)'>Hapus</button>
+                        </td>
+                    </tr>
                     <?php
                         $num++;
                     }
@@ -74,11 +75,11 @@ include_once 'connection.php';
                 </table>
         </div>
         <script>
-            function hapusLaptop(id_laptop) {
-                if (confirm('Apakah anda yakin menghapus laptop ini?')) {
-                    window.location = "hapusLaptop.php?id_laptop=" + id_laptop;
-                }
+        function hapusLaptop(id_laptop) {
+            if (confirm('Apakah anda yakin menghapus laptop ini?')) {
+                window.location = "hapusLaptop.php?id_laptop=" + id_laptop;
             }
+        }
         </script>
 </body>
 

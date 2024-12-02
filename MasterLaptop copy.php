@@ -6,12 +6,51 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 
 <head>
-    <?= include_once 'head.php'; ?>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <title>SPK Laptop One</title>
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <!-- Nucleo Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/nucleo@2.0.0/css/nucleo.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" crossorigin="anonymous">
+    </script>
+    <!-- CSS Files -->
+
+    <link id="pagestyle" href="assets/css/argon-dashboard.minf066.css?v=2.1.0" rel="stylesheet" />
+    <!-- Anti-flicker snippet (recommended)  -->
+    <style>
+    .async-hide {
+        opacity: 0 !important
+    }
+    </style>
+    <script>
+    (function(a, s, y, n, c, h, i, d, e) {
+        s.className += ' ' + y;
+        h.start = 1 * new Date;
+        h.end = i = function() {
+            s.className = s.className.replace(RegExp(' ?' + y), '')
+        };
+        (a[n] = a[n] || []).hide = h;
+        setTimeout(function() {
+            i();
+            h.end = null
+        }, c);
+        h.timeout = c;
+    })(window, document.documentElement, 'async-hide', 'dataLayer', 4000, {
+        'GTM-K9BGS8K': true
+    });
+    </script>
 </head>
 
-<body class="g-sidenav-show bg-gray-100">
+<body>
     <div class="min-height-300 bg-dark position-absolute w-100"></div>
 
     <?= include_once 'aside.php'; ?>
@@ -23,6 +62,14 @@ session_start();
         include_once 'navbar.php';
         ?>
 
+        <!-- <div class='col-2 d-flex flex-column justify-content-start h-100 py-5' id='sidebar'>
+            <button class='btn btn-primary'">Master Laptop</button>
+            <button class='btn btn-light' onclick=" location.href='MasterKriteria.php'">Master Kriteria</button>
+            <button class='btn btn-light' onclick=" location.href='MasterKaryawan.php'">Master Karyawan</button>
+            <div class='sidebarDivider align-self-center'></div>
+            <button class='btn btn-light' id='buttonHitung' onclick=" location.href='pilihKriteria.php'">Hitung</button>
+            <button class='btn btn-light' id='buttonHitung' onclick=" location.href='logout.php'">Logout</button>
+        </div> -->
         <div class="container-fluid py-4">
             <div class="row">
                 <div class="col-12">
@@ -185,6 +232,7 @@ session_start();
     }
     </script>
     <?= include_once 'script.php'; ?>
+
 </body>
 
 </html>
