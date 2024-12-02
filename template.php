@@ -43,59 +43,64 @@ session_start();
                                     $res = mysqli_query($conn, $query);
                                     ?>
 
-                                    <table class="table align-items-center mb-0">
-                                        <thead>
-                                            <tr>
-                                                <th
-                                                    class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                                    #</th>
-                                                <th
-                                                    class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                                                    Merek</th>
-                                                <th
-                                                    class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                                    Nama Laptop</th>
-                                                <th
-                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                                    Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php
-                                            $num = 1;
-                                            while ($data = mysqli_fetch_array($res)) {
-                                            ?>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex px-2 py-1">
-                                                        <div class="d-flex flex-column justify-content-center">
-                                                            <h6 class="mb-0 text-sm"><?= $num; ?></h6>
+                                    <div class="overflow-x-auto">
+                                        <table class="table align-items-center mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th
+                                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                        #</th>
+                                                    <th
+                                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                                        Merek</th>
+                                                    <th
+                                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                        Nama Laptop</th>
+                                                    <th
+                                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                        Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php
+                                                $num = 1;
+                                                while ($data = mysqli_fetch_array($res)) {
+                                                ?>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex px-2 py-1">
+                                                            <div class="d-flex flex-column justify-content-center">
+                                                                <h6 class="mb-0 text-sm"><?= $num; ?></h6>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <p class="text-xs font-weight-bold mb-0"><?= $data['MERK']; ?></p>
-                                                </td>
-                                                <td>
-                                                    <p class="text-xs text-secondary mb-0"><?= $data['NAMA_LAPTOP']; ?>
-                                                    </p>
-                                                </td>
-                                                <td class="align-middle text-center">
-                                                    <a href="formEditLaptop.php?id_laptop=<?= $data["ID_LAPTOP"]; ?>"
-                                                        class="text-secondary font-weight-bold text-xs">
-                                                        <button type="button"
-                                                            class="btn btn-success btn-sm">Edit</button>
-                                                    </a>
-                                                    <button class="btn btn-danger btn-sm"
-                                                        onclick="hapusLaptop(<?= $data['ID_LAPTOP']; ?>)">Hapus</button>
-                                                </td>
-                                            </tr>
-                                            <?php
-                                                $num++;
-                                            }
-                                            ?>
-                                        </tbody>
-                                    </table>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-xs font-weight-bold mb-0"><?= $data['MERK']; ?>
+                                                        </p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-xs text-secondary mb-0">
+                                                            <?= $data['NAMA_LAPTOP']; ?>
+                                                        </p>
+                                                    </td>
+                                                    <td class="align-middle text-center">
+                                                        <a href="formEditLaptop.php?id_laptop=<?= $data["ID_LAPTOP"]; ?>"
+                                                            class="text-secondary font-weight-bold text-xs">
+                                                            <button type="button"
+                                                                class="btn btn-success btn-sm">Edit</button>
+                                                        </a>
+                                                        <button class="btn btn-danger btn-sm"
+                                                            onclick="hapusLaptop(<?= $data['ID_LAPTOP']; ?>)">Hapus</button>
+                                                    </td>
+                                                </tr>
+                                                <?php
+                                                    $num++;
+                                                }
+                                                ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
