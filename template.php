@@ -8,13 +8,13 @@ session_start();
 <html lang="en">
 
 <head>
-    <?= include_once 'head.php'; ?>
+    <?php include_once 'head.php'; ?>
 </head>
 
 <body class="g-sidenav-show bg-gray-100">
     <div class="min-height-300 bg-dark position-absolute w-100"></div>
 
-    <?= include_once 'aside.php'; ?>
+    <?php include_once 'aside.php'; ?>
     <main class="main-content position-relative border-radius-lg">
         <?php
         if ($_SESSION['jenis'] == "usr") {
@@ -96,7 +96,6 @@ session_start();
                                             ?>
                                         </tbody>
                                     </table>
-
                                 </div>
                             </div>
                         </div>
