@@ -24,7 +24,7 @@
             </li>
             <!-- Master Kriteria -->
             <li class="nav-item">
-                <a class="nav-link" href="MasterKriteria">
+                <a class="nav-link" href="MasterKriteria.php">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="ni ni-calendar-grid-58 text-dark text-sm opacity-10"></i>
@@ -34,7 +34,7 @@
             </li>
             <!-- Master Karyawan -->
             <li class="nav-item">
-                <a class="nav-link" href="MasterKaryawan">
+                <a class="nav-link" href="MasterKaryawan.php">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
@@ -44,7 +44,7 @@
             </li>
             <!-- Hitung -->
             <li class="nav-item">
-                <a class="nav-link" href="pilihKriteria">
+                <a class="nav-link" href="pilihKriteria.php">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="ni ni-check-bold text-dark text-sm opacity-10"></i>
@@ -54,7 +54,7 @@
             </li>
             <!-- Logout -->
             <li class="nav-item">
-                <a class="nav-link" href="logout">
+                <a class="nav-link" href="logout.php">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="ni ni-button-power text-dark text-sm opacity-10"></i>
