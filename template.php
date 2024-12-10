@@ -116,11 +116,11 @@ session_start();
     </div>
 
     <script>
-    function hapusLaptop(id_laptop) {
-        if (confirm('Apakah anda yakin menghapus laptop ini?')) {
-            window.location = "hapusLaptop.php?id_laptop=" + id_laptop;
+        function hapusLaptop(id_laptop) {
+            if (confirm('Apakah anda yakin menghapus laptop ini?')) {
+                window.location = "hapusLaptop.php?id_laptop=" + id_laptop;
+            }
         }
-    }
     </script>
     <?= include_once 'script.php'; ?>
 </body>
