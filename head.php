@@ -9,8 +9,8 @@
 <!-- Nucleo Icons -->
 <link href="assets/css/nucleo-icons.css" rel="stylesheet" />
 <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
-<!-- Font Awesome Icons -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 <!-- CSS Files -->
 <link id="pagestyle" href="assets/css/argon-dashboard.minf066.css?v=2.1.0" rel="stylesheet" />
 <!-- Anti-flicker snippet (recommended)  -->

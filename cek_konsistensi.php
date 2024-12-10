@@ -263,4 +263,4 @@ for ($i = 0; $i < count($hasil_saran); $i++) {
 }
 session_start();
 $_SESSION['array'] = $hasil_saran;
-// header("Location: hasil.php");
+header("Location: hasil.php");
