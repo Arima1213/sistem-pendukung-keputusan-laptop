@@ -18,13 +18,17 @@ $id_kriteria = $_GET['idKriteria'];
 <body>
 
     <div class='container-fluid d-flex vh-100 justify-content-center align-items-center'>
-    <?php
+        <?php
         session_start();
         ?>
         <div class='col-2 d-flex flex-column justify-content-start h-100 py-5' id='sidebar'>
-            <button class='btn btn-light' onclick="location.href = 'MasterLaptop.php'" <?php if($_SESSION['jenis'] == "usr"){ echo "disabled"; } ?>>Master Laptop</button>
+            <button class='btn btn-light' onclick="location.href = 'MasterLaptop.php'" <?php if ($_SESSION['jenis'] == "usr") {
+                                                                                            echo "disabled";
+                                                                                        } ?>>Master Laptop</button>
             <button class='btn btn-light' onclick="location.href = 'MasterKriteria.php'">Master Kriteria</button>
-            <button class='btn btn-light' onclick="location.href = 'MasterKaryawan.php'" <?php if($_SESSION['jenis'] == "usr"){ echo "disabled"; } ?>>Master Karyawan</button>
+            <button class='btn btn-light' onclick="location.href = 'MasterKaryawan.php'" <?php if ($_SESSION['jenis'] == "usr") {
+                                                                                                echo "disabled";
+                                                                                            } ?>>Master Karyawan</button>
             <div class='sidebarDivider align-self-center'></div>
             <button class='btn btn-light' id='buttonHitung'>Hitung</button>
         </div>
@@ -36,7 +40,7 @@ $id_kriteria = $_GET['idKriteria'];
             <form action="edit_kriteria.php" method='post'>
 
                 <?php
-                $query = "SELECT * FROM master_kriteria WHERE ID_KRITERIA = ".$id_kriteria;
+                $query = "SELECT * FROM master_kriteria WHERE ID_KRITERIA = " . $id_kriteria;
                 $res = mysqli_query($conn, $query);
                 while ($data = mysqli_fetch_array($res)) {
                     $kategori = $data['TIPE_KRITERIA'];
@@ -62,8 +66,12 @@ $id_kriteria = $_GET['idKriteria'];
                                 <h4>Kategori Kriteria</h4>
                                 <select class="form-select" name="katKriteria" required>
                                     <option value="">-- Pilih --</option>
-                                    <option value="cos" <?php if($kategori == "cos"){ echo 'selected';} ?>> Cost (Terkecil paling baik) </option>
-                                    <option value="ben" <?php if($kategori == "ben"){ echo 'selected';} ?>> Benefit (Terbesar paling baik) </option>
+                                    <option value="cos" <?php if ($kategori == "cos") {
+                                                            echo 'selected';
+                                                        } ?>> Cost (Terkecil paling baik) </option>
+                                    <option value="ben" <?php if ($kategori == "ben") {
+                                                            echo 'selected';
+                                                        } ?>> Benefit (Terbesar paling baik) </option>
                                 </select>
                             </div>
                         </div>
