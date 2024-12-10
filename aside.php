@@ -12,6 +12,33 @@
     <hr class="horizontal dark mt-0">
     <div class="collapse navbar-collapse w-auto" id="sidenav-collapse-main">
         <ul class="navbar-nav">
+            <?php
+            // Periksa jenis user dari session
+            if ($_SESSION['jenis'] == "usr") {
+                // Jika user adalah 'usr', tampilkan hanya menu Hitung dan Logout
+            ?>
+            <li class="nav-item">
+                <a class="nav-link" href="pilihKriteria.php">
+                    <div
+                        class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="fas fa-check text-dark text-sm opacity-10"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Hitung</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="logout.php">
+                    <div
+                        class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="fas fa-power-off text-dark text-sm opacity-10"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Logout</span>
+                </a>
+            </li>
+            <?php
+            } else {
+                // Jika user bukan 'usr', tampilkan semua menu
+            ?>
             <li class="nav-item">
                 <a class="nav-link active" href="MasterLaptop.php">
                     <div
@@ -57,6 +84,9 @@
                     <span class="nav-link-text ms-1">Logout</span>
                 </a>
             </li>
+            <?php
+            }
+            ?>
         </ul>
     </div>
 </aside>
